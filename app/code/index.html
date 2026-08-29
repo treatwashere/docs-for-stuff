@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Docs For Stuff">
     <title>Docs For Stuff</title>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        darkbg: '#1e1e1e',
-                        cardbg: '#3e3e42',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
     <body>
     <style>
@@ -30,12 +17,55 @@
   text-align: center;
 }
 
+/* Container styling to align buttons cleanly */
 .httpsbuttons {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
   align-items: center;
-  text-align: center;
+}
+
+/* Base button styling */
+.httpsbuttons a,
+.httpsbuttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  
+  /* Corner rounding: use a high value like 50px for pill shapes */
+  border-radius: 50px;
+  
+  /* Typography */
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  
+  /* Colors */
+  color: #ffffff;
+  background-color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Visual feedback & depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover & interaction effects */
+.httpsbuttons a:hover,
+.httpsbuttons button:hover {
+  background-color: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.httpsbuttons a:active,
+.httpsbuttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
     </style>
     
