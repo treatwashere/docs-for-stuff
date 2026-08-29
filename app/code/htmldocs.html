@@ -20,18 +20,55 @@
       background-color: #121212;
       color: #ffffff;
       box-sizing: border-box;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    /* Top navigation container */
+    .top-nav {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    /* Styled return button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #2a2a2a;
+      transform: translateY(-1px);
+      color: rgb(255, 147, 0); /* Highlights orange on hover */
     }
 
     .header {
-      font-family: 'Rubik', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 80px 20px 40px; /* Top padding adjusted for top-nav space */
     }
   </style>
+
+  <!-- Return Button -->
+  <div class="top-nav">
+    <a href="/" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back</span>
+    </a>
+  </div>
 
   <div class="header">
     <h1><i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs</h1>
