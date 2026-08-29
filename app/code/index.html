@@ -9,6 +9,51 @@
 </head>
     <body>
     <style>
+    body {
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 12px;
+  background-color: #1e1e1e;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  /* Creates the top bar header area */
+  padding-top: 40px;
+  position: relative;
+}
+
+/* Header bar background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: #252526;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Dots (Red, Yellow, Green) */
+body::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  
+  /* Draws the red dot, then yellow and green via box-shadow offset */
+  background-color: #ff5f56;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  z-index: 10;
+}
+
+    
     .header {
   display: flex;
   flex-direction: column;
