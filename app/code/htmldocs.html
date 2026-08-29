@@ -2,36 +2,78 @@
 <html lang="en">
 <head>
   <script src="https://kit.fontawesome.com/309c894b74.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="noviewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Docs For Stuff - HTML Docs">
-    <title>Docs For Stuff - HTML Docs</title>
-    </head>
-    <body>
-    <style>
-    html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #121212;
-  color: #ffffff;
-  box-sizing: border-box;
-}
-    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Docs For Stuff - HTML Docs">
+  <title>Docs For Stuff - HTML Docs</title>
+</head>
+<body>
+  <style>
+    /* Outer canvas background */
+    html {
+      background-color: #0d0d0d;
+      min-height: 100vh;
+    }
+
+    /* Framed Device Body */
+    body {
+      max-width: 900px;
+      width: 90%;
+      margin: 40px auto;
+      padding: 30px;
+      padding-top: 60px; /* Space for the top header bar */
+      border-radius: 12px;
+      background-color: #121212;
+      color: #ffffff;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Device Header Bar */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-color: #1e1e1e;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Window Control Dots (Red, Yellow, Green) */
+    body::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ff5f56;
+      box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+      z-index: 10;
+    }
+
+    /* Content Styling */
     .header {
-  font-family: 'Rubik', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-    </style>
-    
-    <div class="header">
-    <h1> <i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs</h1>
-    </div>
+      font-family: 'Rubik', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+
+  <div class="header">
+    <h1><i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs</h1>
+  </div>
+</body>
+</html>
