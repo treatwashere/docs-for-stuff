@@ -2,100 +2,104 @@
 <html lang="en">
 <head>
    <script src="https://kit.fontawesome.com/309c894b74.js" crossorigin="anonymous"></script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Docs For Stuff">
-    <title>Docs For Stuff</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Docs For Stuff">
+   <title>Docs For Stuff</title>
 </head>
-    <body>
-    <style>
-    
- html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #121212;
-  color: #ffffff;
-  box-sizing: border-box;
-}
+<body>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      background-color: #121212;
+      color: #ffffff;
+      box-sizing: border-box;
+    }
 
-
-    
     .header {
-  font-family: 'Rubik', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+      font-family: 'Rubik', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 20px;
+    }
 
-/* Container styling to align buttons cleanly */
-.httpsbuttons {
-  font-family: 'Rubik', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-}
+    /* Divider line styling */
+    .divider {
+      border: none;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 80%;
+      max-width: 600px;
+      margin: 24px auto;
+    }
 
-/* Base button styling */
-.httpsbuttons a,
-.httpsbuttons button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 24px;
-  
-  /* Corner rounding: use a high value like 50px for pill shapes */
-  border-radius: 50px;
-  
-  /* Typography */
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  
-  /* Colors */
-  color: #ffffff;
-  background-color: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  
-  /* Visual feedback & depth */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
+    /* Container styling to align buttons cleanly */
+    .httpsbuttons {
+      font-family: 'Rubik', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+    }
 
-/* Hover & interaction effects */
-.httpsbuttons a:hover,
-.httpsbuttons button:hover {
-  background-color: #1f2937;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+    /* Base button styling */
+    .httpsbuttons a,
+    .httpsbuttons button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
 
-.httpsbuttons a:active,
-.httpsbuttons button:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-    </style>
+    /* Hover & interaction effects */
+    .httpsbuttons a:hover,
+    .httpsbuttons button:hover {
+      background-color: #1f2937;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .httpsbuttons a:active,
+    .httpsbuttons button:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  </style>
     
-    <div class="header">
-      <header>
-    <h1>Docs For Stuff</h1>
+  <div class="header">
+    <header>
+      <h1>Docs For Stuff</h1>
     </header>
-    </div>
+  </div>
     
-    <div class="httpsbuttons">
-    <a href="/htmldocs.html" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm font-medium transition flex items-center gap-2">
-                <i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs
-            </a>
-    
-    
+  <!-- Divider Line -->
+  <hr class="divider">
+
+  <div class="httpsbuttons">
+    <a href="/htmldocs.html" target="_blank">
+      <i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs
+    </a>
+  </div>
+</body>
+</html>
