@@ -1,1 +1,88 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/309c894b74.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Docs For Stuff - HTML Docs">
+  <title>Docs For Stuff - CSS Docs</title>
+</head>
+<body>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      background-color: #121212;
+      color: #ffffff;
+      box-sizing: border-box;
+      font-family: 'Rubik', sans-serif;
+    }
+
+     .divider {
+      border: none;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 80%;
+      max-width: 600px;
+      margin: 24px auto;
+    }
+    
+    /* Top navigation container */
+    .top-nav {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    /* Styled return button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #2a2a2a;
+      transform: translateY(-1px);
+      color: rgb(255, 147, 0); /* Highlights orange on hover */
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px 40px; /* Top padding adjusted for top-nav space */
+    }
+  </style>
+
+  <!-- Return Button -->
+  <div class="top-nav">
+    <a href="/" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back</span>
+    </a>
+  </div>
+  
+  <div class="header">
+    <h1><i class="fa-brands fa-css3-alt" style="color: rgb(116, 192, 252);"></i> CSS Docs</h1>
+    <h4>This Doc is for <i class="fa-brands fa-css3-alt" style="color: rgb(116, 192, 252);"></i> CSS. This should help you out.</h4>
+  </div>
+  <hr class="divider">
+</body>
+</html>
