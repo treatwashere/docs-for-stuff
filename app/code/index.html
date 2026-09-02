@@ -85,32 +85,43 @@
       transform: translateY(0);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
-  </style>
-    
-  <div class="header">
-    <header>
-      <h1>Docs For Stuff</h1>
-      <h4>This website shows almost all docs in the world!</h4>
-    </header>
-  </div>
-    
-  <!-- Divider Line -->
-  <hr class="divider">
 
-  <div class="httpsbuttons">
-    <a href="/htmldocs.html" target="_blank">
-      <i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs
-    </a>
-    
-    <a href="/cssdocs.html" target="_blank">
-    <i class="fa-brands fa-css3-alt" style="color: rgb(116, 192, 252);"></i> CSS Docs
-    </a>
-  </div>
-  
-  <hr class="divider">
-    
-    <div class="bottom"
-      --- v1 icon "" ---
-      </div>
-</body>
-</html>
+.site-footer {
+  position: relative;
+  width: 100%;
+  background-color: #262525;
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  padding: 40px 20px 30px;
+  box-sizing: border-box;
+}
+
+/* Centered link stack */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-links span,
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 147, 0); /* Highlights orange on hover */
+}
+
+/* Bottom-left copyright notice */
+.footer-copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #a0a0a0;
+ 
