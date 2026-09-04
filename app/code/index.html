@@ -85,6 +85,49 @@
       transform: translateY(0);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
+
+.site-footer {
+  position: relative;
+  width: 100%;
+  background-color: #262525;
+  color: #ffffff;
+  font-family: 'Rubik';
+  padding: 40px 20px 30px;
+  box-sizing: border-box;
+}
+
+/* Centered link stack */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-links span,
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 147, 0); /* Highlights orange on hover */
+}
+
+/* Bottom-left copyright notice */
+.footer-copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
   </style>
     
   <div class="header">
@@ -106,5 +149,21 @@
     <i class="fa-brands fa-css3-alt" style="color: rgb(116, 192, 252);"></i> CSS Docs
     </a>
   </div>
+  
+  <hr class="divider">
+    
+    <div class="bottom"
+      <footer class="site-footer">
+  <div class="footer-links">
+    <a href=""> <i class="fa-solid fa-code-compare fa-spin" style="color: rgb(64, 137, 71);"></i> Version 1</a>
+    <a href="/changelog">Changelog</a>
+    <a href="mailto:support@example.com">Support Email</a>
+    <a href="/roadmap">Roadmap</a>
+  </div>
+  <div class="footer-copyright">
+    <i class="fa-regular fa-copyright"></i> 2026 Docs For Stuff
+  </div>
+</footer>
+      </div>
 </body>
 </html>
