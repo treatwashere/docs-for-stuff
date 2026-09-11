@@ -72,6 +72,14 @@
       cursor: pointer;
     }
 
+    /* Styles image icons to match FontAwesome size and alignment */
+    .httpsbuttons img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      margin-right: 6px;
+    }
+
     /* Hover & interaction effects */
     .httpsbuttons a:hover,
     .httpsbuttons button:hover {
@@ -85,6 +93,49 @@
       transform: translateY(0);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
+
+.site-footer {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Rubik';
+  padding: 40px 20px 30px;
+  box-sizing: border-box;
+}
+
+/* Centered link stack */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-links span,
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 147, 0); /* Highlights orange on hover */
+}
+
+/* Bottom-left copyright notice */
+.footer-copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
   </style>
     
   <div class="header">
@@ -101,6 +152,35 @@
     <a href="/htmldocs.html" target="_blank">
       <i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs
     </a>
+    
+    <a href="/cssdocs.html" target="_blank">
+      <i class="fa-brands fa-css3-alt" style="color: rgb(116, 192, 252);"></i> CSS Docs
+    </a>
+    
+    <a href="/jsdocs.html" target="_blank">
+      <i class="fa-brands fa-square-js" style="color: rgb(255, 96, 0);"></i> JS Docs
+    </a>
+    
+    <a href="/pydocs.html" target="_blank">
+      <img src="https://raw.githubusercontent.com/treatwashere/docs-for-stuff/refs/heads/main/app/assets/IMG_6133.webp" alt="Python Docs"> Python Docs
+    </a>
+  </div>
+  
+  <hr class="divider">
+    
+  <div class="bottom">
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href=""> <i class="fa-solid fa-code-compare fa-spin" style="color: rgb(64, 137, 71);"></i> Version 1</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="mailto:support@example.com">Support Email</a>
+        <a href="/roadmap.html">Roadmap</a>
+        <img src="https://deploy-badge.vercel.app/vercel/docs-for-stuff?name=Vercel" alt="Vercel Deploy">
+      </div>
+      <div class="footer-copyright">
+        <i class="fa-regular fa-copyright"></i> 2026 Docs For Stuff
+      </div>
+    </footer>
   </div>
 </body>
 </html>
