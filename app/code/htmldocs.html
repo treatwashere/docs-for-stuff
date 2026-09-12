@@ -9,24 +9,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Docs For Stuff - HTML Docs">
   <title>Docs For Stuff - HTML Docs</title>
-</head>
-<body>
   <style>
+    :root {
+      --bg-main: #121212;
+      --card-bg: #1e1e1e;
+      --header-bg: #181818;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --text-main: #ffffff;
+      --text-muted: #a0a0a0;
+      --brand-orange: rgb(255, 147, 0);
+      --brand-orange-hover: rgb(220, 125, 0);
+      --code-bg: #0a0a0a;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       min-height: 100vh;
-      background-color: #121212;
-      color: #ffffff;
+      background-color: var(--bg-main);
+      color: var(--text-main);
       box-sizing: border-box;
       font-family: 'Rubik', sans-serif;
     }
 
-     .divider {
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .divider {
       border: none;
       height: 1px;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: var(--border-color);
       width: 80%;
       max-width: 600px;
       margin: 24px auto;
@@ -51,14 +67,14 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border-color);
       transition: all 0.2s ease;
     }
 
     .back-btn:hover {
       background-color: #2a2a2a;
       transform: translateY(-1px);
-      color: rgb(255, 147, 0); /* Highlights orange on hover */
+      color: var(--brand-orange);
     }
 
     .header {
@@ -67,9 +83,201 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 80px 20px 40px; /* Top padding adjusted for top-nav space */
+      padding: 80px 20px 20px;
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .header h4 {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* Table of Contents */
+    .toc {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin: 20px 0 40px;
+    }
+
+    .toc h3 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: var(--brand-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .toc ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--brand-orange);
+    }
+
+    /* Reference Content Sections */
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 0.9rem;
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .doc-table th, .doc-table td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .doc-table th {
+      background: var(--header-bg);
+      color: var(--brand-orange);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: monospace;
+      color: #ff7b72;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Widget Component Styling */
+    .doc-code-widget {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background: var(--card-bg);
+      overflow: hidden;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .widget-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .widget-title {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .widget-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #2a2a2a;
+      color: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-family: 'Rubik', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #383838;
+    }
+
+    .btn-run {
+      background: var(--brand-orange);
+      border-color: var(--brand-orange);
+      color: #121212;
+      font-weight: 600;
+    }
+
+    .btn-run:hover {
+      background: var(--brand-orange-hover);
+      border-color: var(--brand-orange-hover);
+      color: #ffffff;
+    }
+
+    .btn-codepen:hover {
+      color: #4df3ff;
+    }
+
+    .code-editor {
+      width: 100%;
+      background: var(--code-bg);
+      color: #4ade80;
+      border: none;
+      padding: 14px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.88rem;
+      resize: vertical;
+      box-sizing: border-box;
+      outline: none;
+      line-height: 1.5;
+    }
+
+    .preview-output {
+      width: 100%;
+      height: 150px;
+      background: #0d0d0d;
+      border: none;
+      border-top: 1px solid var(--border-color);
+      display: block;
     }
   </style>
+</head>
+<body>
 
   <!-- Return Button -->
   <div class="top-nav">
@@ -83,6 +291,301 @@
     <h1><i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML Docs</h1>
     <h4>This Doc is for <i class="fa-brands fa-html5" style="color: rgb(255, 147, 0);"></i> HTML. This should help you out.</h4>
   </div>
+
   <hr class="divider">
+
+  <div class="container">
+    <!-- Quick Navigation Table of Contents -->
+    <nav class="toc">
+      <h3><i class="fa-solid fa-compass"></i> Quick Navigation</h3>
+      <ul>
+        <li><a href="#doc-structure">1. Document Structure</a></li>
+        <li><a href="#text-formatting">2. Text & Headings</a></li>
+        <li><a href="#links-buttons">3. Links & Buttons</a></li>
+        <li><a href="#forms-inputs">4. Forms & Inputs</a></li>
+        <li><a href="#lists-tables">5. Lists & Data Tables</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECTION 1: DOCUMENT STRUCTURE -->
+    <section id="doc-structure">
+      <h2><i class="fa-solid fa-code" style="color: var(--brand-orange);"></i> 1. Document Structure</h2>
+      <p>HTML5 documents require boilerplate elements to structure the page hierarchy and provide metadata to browsers.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr><th>Tag</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>Defines the document type as standard HTML5.</td></tr>
+          <tr><td><code>&lt;html&gt;</code></td><td>Root element wrapping all page content.</td></tr>
+          <tr><td><code>&lt;head&gt;</code></td><td>Container for metadata, scripts, stylesheets, and titles.</td></tr>
+          <tr><td><code>&lt;body&gt;</code></td><td>Contains all rendered text, visuals, and markup.</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Widget 1 -->
+      <div class="doc-code-widget">
+        <div class="widget-header">
+          <span class="widget-title"><i class="fa-solid fa-laptop-code"></i> Live Editor: Document Structure</span>
+          <div class="widget-actions">
+            <button type="button" class="btn btn-theme" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Dark</button>
+            <button type="button" class="btn btn-run" onclick="runCode(this)"><i class="fa-solid fa-play"></i> Run</button>
+            <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+              <input type="hidden" name="data" class="codepen-data-input" />
+              <button type="submit" class="btn btn-codepen" onclick="prepareCodePen(this)">
+                <i class="fa-brands fa-codepen"></i> CodePen ↗
+              </button>
+            </form>
+          </div>
+        </div>
+        <textarea class="code-editor" spellcheck="false" rows="6">
+<div style="text-align: center; padding: 10px;">
+  <h2 style="color: rgb(255, 147, 0);">Welcome to HTML!</h2>
+  <p>Edit this text to see live preview updates automatically.</p>
+</div></textarea>
+        <iframe class="preview-output"></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TEXT & HEADINGS -->
+    <section id="text-formatting">
+      <h2><i class="fa-solid fa-font" style="color: var(--brand-orange);"></i> 2. Text & Headings</h2>
+      <p>Organize textual information using heading hierarchies and formatting tags.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr><th>Tag</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td><td>Heading tags representing structural hierarchy.</td></tr>
+          <tr><td><code>&lt;p&gt;</code></td><td>Defines standard paragraph blocks.</td></tr>
+          <tr><td><code>&lt;strong&gt;</code></td><td>Applies bold emphasis for important content.</td></tr>
+          <tr><td><code>&lt;em&gt;</code></td><td>Applies italicized emphasis.</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Widget 2 -->
+      <div class="doc-code-widget">
+        <div class="widget-header">
+          <span class="widget-title"><i class="fa-solid fa-laptop-code"></i> Live Editor: Typography</span>
+          <div class="widget-actions">
+            <button type="button" class="btn btn-theme" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Dark</button>
+            <button type="button" class="btn btn-run" onclick="runCode(this)"><i class="fa-solid fa-play"></i> Run</button>
+            <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+              <input type="hidden" name="data" class="codepen-data-input" />
+              <button type="submit" class="btn btn-codepen" onclick="prepareCodePen(this)">
+                <i class="fa-brands fa-codepen"></i> CodePen ↗
+              </button>
+            </form>
+          </div>
+        </div>
+        <textarea class="code-editor" spellcheck="false" rows="6">
+<h3>Heading Level 3</h3>
+<p>Standard paragraph with <strong>bold text</strong> and <em>italics</em>.</p>
+<p>Use <span style="color: rgb(255, 147, 0);">spans</span> for inline styling.</p></textarea>
+        <iframe class="preview-output"></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LINKS & BUTTONS -->
+    <section id="links-buttons">
+      <h2><i class="fa-solid fa-link" style="color: var(--brand-orange);"></i> 3. Links & Buttons</h2>
+      <p>Connect pages via anchors and create interactive click triggers with buttons.</p>
+
+      <!-- Widget 3 -->
+      <div class="doc-code-widget">
+        <div class="widget-header">
+          <span class="widget-title"><i class="fa-solid fa-laptop-code"></i> Live Editor: Interactive Elements</span>
+          <div class="widget-actions">
+            <button type="button" class="btn btn-theme" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Dark</button>
+            <button type="button" class="btn btn-run" onclick="runCode(this)"><i class="fa-solid fa-play"></i> Run</button>
+            <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+              <input type="hidden" name="data" class="codepen-data-input" />
+              <button type="submit" class="btn btn-codepen" onclick="prepareCodePen(this)">
+                <i class="fa-brands fa-codepen"></i> CodePen ↗
+              </button>
+            </form>
+          </div>
+        </div>
+        <textarea class="code-editor" spellcheck="false" rows="6">
+<div style="display: flex; gap: 12px; align-items: center;">
+  <a href="https://vercel.app" target="_blank" style="color: rgb(255, 147, 0);">External Link ↗</a>
+  <button onclick="alert('Button Clicked!')" style="padding: 6px 12px; cursor: pointer;">Interactive Button</button>
+</div></textarea>
+        <iframe class="preview-output"></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FORMS & INPUTS -->
+    <section id="forms-inputs">
+      <h2><i class="fa-solid fa-list-check" style="color: var(--brand-orange);"></i> 4. Forms & Inputs</h2>
+      <p>Capture input from users using interactive form fields, checkboxes, and buttons.</p>
+
+      <!-- Widget 4 -->
+      <div class="doc-code-widget">
+        <div class="widget-header">
+          <span class="widget-title"><i class="fa-solid fa-laptop-code"></i> Live Editor: Forms</span>
+          <div class="widget-actions">
+            <button type="button" class="btn btn-theme" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Dark</button>
+            <button type="button" class="btn btn-run" onclick="runCode(this)"><i class="fa-solid fa-play"></i> Run</button>
+            <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+              <input type="hidden" name="data" class="codepen-data-input" />
+              <button type="submit" class="btn btn-codepen" onclick="prepareCodePen(this)">
+                <i class="fa-brands fa-codepen"></i> CodePen ↗
+              </button>
+            </form>
+          </div>
+        </div>
+        <textarea class="code-editor" spellcheck="false" rows="7">
+<form onsubmit="event.preventDefault(); alert('Submitted!');">
+  <label for="name">User Name:</label><br>
+  <input type="text" id="name" placeholder="Enter name" style="margin: 6px 0 12px; padding: 4px;"><br>
+  <button type="submit" style="background: rgb(255, 147, 0); border: none; padding: 6px 12px; cursor: pointer;">Submit</button>
+</form></textarea>
+        <iframe class="preview-output"></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION 5: LISTS & TABLES -->
+    <section id="lists-tables">
+      <h2><i class="fa-solid fa-table" style="color: var(--brand-orange);"></i> 5. Lists & Data Tables</h2>
+      <p>Organize dynamic data lists or structured tabular content.</p>
+
+      <!-- Widget 5 -->
+      <div class="doc-code-widget">
+        <div class="widget-header">
+          <span class="widget-title"><i class="fa-solid fa-laptop-code"></i> Live Editor: Data Display</span>
+          <div class="widget-actions">
+            <button type="button" class="btn btn-theme" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Dark</button>
+            <button type="button" class="btn btn-run" onclick="runCode(this)"><i class="fa-solid fa-play"></i> Run</button>
+            <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+              <input type="hidden" name="data" class="codepen-data-input" />
+              <button type="submit" class="btn btn-codepen" onclick="prepareCodePen(this)">
+                <i class="fa-brands fa-codepen"></i> CodePen ↗
+              </button>
+            </form>
+          </div>
+        </div>
+        <textarea class="code-editor" spellcheck="false" rows="7">
+<table border="1" cellpadding="6" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr style="background: rgba(255,147,0,0.2);"><th>Language</th><th>Role</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>HTML</td><td>Markup Structure</td></tr>
+    <tr><td>CSS</td><td>Styling & Layout</td></tr>
+  </tbody>
+</table></textarea>
+        <iframe class="preview-output"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <!-- Global Script Logic -->
+  <script>
+    const THEME_STORAGE_KEY = 'docs_stuff_widget_theme';
+    let debounceTimer;
+
+    function getSavedTheme() {
+      return localStorage.getItem(THEME_STORAGE_KEY) || 'dark';
+    }
+
+    function syncAllWidgets(theme) {
+      document.querySelectorAll('.doc-code-widget').forEach(widget => {
+        widget.dataset.theme = theme;
+        const themeBtn = widget.querySelector('.btn-theme');
+        if (themeBtn) {
+          themeBtn.innerHTML = theme === 'dark' 
+            ? '<i class="fa-solid fa-moon"></i> Dark' 
+            : '<i class="fa-solid fa-sun"></i> Light';
+        }
+        renderWidgetPreview(widget);
+      });
+    }
+
+    function toggleTheme() {
+      const currentTheme = getSavedTheme();
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      syncAllWidgets(nextTheme);
+    }
+
+    function renderWidgetPreview(container) {
+      const rawCode = container.querySelector('.code-editor').value;
+      const iframe = container.querySelector('.preview-output');
+      const theme = container.dataset.theme || getSavedTheme();
+
+      const isDark = theme === 'dark';
+      const bgColor = isDark ? '#0d0d0d' : '#ffffff';
+      const textColor = isDark ? '#f3f4f6' : '#111827';
+      const colorScheme = isDark ? 'dark' : 'light';
+
+      const wrappedCode = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="color-scheme" content="${colorScheme}">
+          <style>
+            :root { color-scheme: ${colorScheme}; }
+            body {
+              background-color: ${bgColor};
+              color: ${textColor};
+              font-family: 'Rubik', system-ui, sans-serif;
+              padding: 12px;
+              margin: 0;
+              transition: background-color 0.2s, color 0.2s;
+            }
+          </style>
+        </head>
+        <body>
+          ${rawCode}
+        </body>
+        </html>
+      `;
+
+      iframe.srcdoc = wrappedCode;
+    }
+
+    function runCode(btn) {
+      const container = btn.closest('.doc-code-widget');
+      renderWidgetPreview(container);
+    }
+
+    function prepareCodePen(btn) {
+      const container = btn.closest('.doc-code-widget');
+      const code = container.querySelector('.code-editor').value;
+      const input = container.querySelector('.codepen-data-input');
+
+      const payload = {
+        title: "Docs For Stuff - HTML Reference Snippet",
+        description: "Exported from Docs For Stuff HTML docs",
+        html: code,
+        editors: "100"
+      };
+
+      input.value = JSON.stringify(payload);
+    }
+
+    // Attach typing listeners with 300ms debounce
+    function setupLiveTyping() {
+      document.querySelectorAll('.code-editor').forEach(editor => {
+        editor.addEventListener('input', (e) => {
+          clearTimeout(debounceTimer);
+          const container = e.target.closest('.doc-code-widget');
+          debounceTimer = setTimeout(() => {
+            renderWidgetPreview(container);
+          }, 300);
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = getSavedTheme();
+      syncAllWidgets(savedTheme);
+      setupLiveTyping();
+    });
+  </script>
 </body>
 </html>
