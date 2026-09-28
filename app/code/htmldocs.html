@@ -96,43 +96,6 @@
       font-weight: 400;
     }
 
-    /* Table of Contents */
-    .toc {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 18px 24px;
-      margin: 20px 0 40px;
-    }
-
-    .toc h3 {
-      font-size: 1rem;
-      margin-bottom: 12px;
-      color: var(--brand-orange);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .toc ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 24px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .toc a {
-      color: var(--text-main);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    .toc a:hover {
-      color: var(--brand-orange);
-    }
-
     /* Reference Content Sections */
     section {
       margin-bottom: 40px;
@@ -145,12 +108,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    section p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      font-size: 0.95rem;
     }
 
     .doc-table {
@@ -295,22 +252,10 @@
   <hr class="divider">
 
   <div class="container">
-    <!-- Quick Navigation Table of Contents -->
-    <nav class="toc">
-      <h3><i class="fa-solid fa-compass"></i> Quick Navigation</h3>
-      <ul>
-        <li><a href="#doc-structure">1. Document Structure</a></li>
-        <li><a href="#text-formatting">2. Text & Headings</a></li>
-        <li><a href="#links-buttons">3. Links & Buttons</a></li>
-        <li><a href="#forms-inputs">4. Forms & Inputs</a></li>
-        <li><a href="#lists-tables">5. Lists & Data Tables</a></li>
-      </ul>
-    </nav>
 
     <!-- SECTION 1: DOCUMENT STRUCTURE -->
     <section id="doc-structure">
       <h2><i class="fa-solid fa-code" style="color: var(--brand-orange);"></i> 1. Document Structure</h2>
-      <p>HTML5 documents require boilerplate elements to structure the page hierarchy and provide metadata to browsers.</p>
 
       <table class="doc-table">
         <thead>
@@ -339,11 +284,7 @@
             </form>
           </div>
         </div>
-        <textarea class="code-editor" spellcheck="false" rows="6">
-<div style="text-align: center; padding: 10px;">
-  <h2 style="color: rgb(255, 147, 0);">Welcome to HTML!</h2>
-  <p>Edit this text to see live preview updates automatically.</p>
-</div></textarea>
+        <textarea class="code-editor" spellcheck="false" rows="6"></textarea>
         <iframe class="preview-output"></iframe>
       </div>
     </section>
@@ -351,7 +292,6 @@
     <!-- SECTION 2: TEXT & HEADINGS -->
     <section id="text-formatting">
       <h2><i class="fa-solid fa-font" style="color: var(--brand-orange);"></i> 2. Text & Headings</h2>
-      <p>Organize textual information using heading hierarchies and formatting tags.</p>
 
       <table class="doc-table">
         <thead>
@@ -380,10 +320,7 @@
             </form>
           </div>
         </div>
-        <textarea class="code-editor" spellcheck="false" rows="6">
-<h3>Heading Level 3</h3>
-<p>Standard paragraph with <strong>bold text</strong> and <em>italics</em>.</p>
-<p>Use <span style="color: rgb(255, 147, 0);">spans</span> for inline styling.</p></textarea>
+        <textarea class="code-editor" spellcheck="false" rows="6"></textarea>
         <iframe class="preview-output"></iframe>
       </div>
     </section>
@@ -391,7 +328,6 @@
     <!-- SECTION 3: LINKS & BUTTONS -->
     <section id="links-buttons">
       <h2><i class="fa-solid fa-link" style="color: var(--brand-orange);"></i> 3. Links & Buttons</h2>
-      <p>Connect pages via anchors and create interactive click triggers with buttons.</p>
 
       <!-- Widget 3 -->
       <div class="doc-code-widget">
@@ -408,11 +344,7 @@
             </form>
           </div>
         </div>
-        <textarea class="code-editor" spellcheck="false" rows="6">
-<div style="display: flex; gap: 12px; align-items: center;">
-  <a href="https://vercel.app" target="_blank" style="color: rgb(255, 147, 0);">External Link ↗</a>
-  <button onclick="alert('Button Clicked!')" style="padding: 6px 12px; cursor: pointer;">Interactive Button</button>
-</div></textarea>
+        <textarea class="code-editor" spellcheck="false" rows="6"></textarea>
         <iframe class="preview-output"></iframe>
       </div>
     </section>
@@ -420,7 +352,6 @@
     <!-- SECTION 4: FORMS & INPUTS -->
     <section id="forms-inputs">
       <h2><i class="fa-solid fa-list-check" style="color: var(--brand-orange);"></i> 4. Forms & Inputs</h2>
-      <p>Capture input from users using interactive form fields, checkboxes, and buttons.</p>
 
       <!-- Widget 4 -->
       <div class="doc-code-widget">
@@ -437,12 +368,7 @@
             </form>
           </div>
         </div>
-        <textarea class="code-editor" spellcheck="false" rows="7">
-<form onsubmit="event.preventDefault(); alert('Submitted!');">
-  <label for="name">User Name:</label><br>
-  <input type="text" id="name" placeholder="Enter name" style="margin: 6px 0 12px; padding: 4px;"><br>
-  <button type="submit" style="background: rgb(255, 147, 0); border: none; padding: 6px 12px; cursor: pointer;">Submit</button>
-</form></textarea>
+        <textarea class="code-editor" spellcheck="false" rows="7"></textarea>
         <iframe class="preview-output"></iframe>
       </div>
     </section>
@@ -450,7 +376,6 @@
     <!-- SECTION 5: LISTS & TABLES -->
     <section id="lists-tables">
       <h2><i class="fa-solid fa-table" style="color: var(--brand-orange);"></i> 5. Lists & Data Tables</h2>
-      <p>Organize dynamic data lists or structured tabular content.</p>
 
       <!-- Widget 5 -->
       <div class="doc-code-widget">
@@ -467,16 +392,7 @@
             </form>
           </div>
         </div>
-        <textarea class="code-editor" spellcheck="false" rows="7">
-<table border="1" cellpadding="6" style="border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr style="background: rgba(255,147,0,0.2);"><th>Language</th><th>Role</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>HTML</td><td>Markup Structure</td></tr>
-    <tr><td>CSS</td><td>Styling & Layout</td></tr>
-  </tbody>
-</table></textarea>
+        <textarea class="code-editor" spellcheck="false" rows="7"></textarea>
         <iframe class="preview-output"></iframe>
       </div>
     </section>
