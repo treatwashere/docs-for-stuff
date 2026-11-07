@@ -1,7 +1,7 @@
 # docs-for-stuff
 
 <a href="https://v1docs-for-stuff.vercel.app" target="_blank" rel="noopener noreferrer">
-  <i class="fa-solid fa-globe fa-spin" style="color: rgb(255, 255, 255);"></i> Open Page
+  <img src= “app/assets/globe-solid-full.svg”></img> Open Page
 </a>
 
 <img src="https://raw.githubusercontent.com/treatwashere/docs-for-stuff/main/app/assets/pen-clip-white.svg" width="18" height="18" alt="Edit icon" /> Edit the pages!
